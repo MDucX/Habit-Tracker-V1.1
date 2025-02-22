@@ -15,7 +15,7 @@ var months = [
     "April",
     "May",
     "June",
-    "Angust",
+    "August",
     "September",
     "October",
     "November",
@@ -178,3 +178,6 @@ resetBtn.onclick = function () {
     totalDays.innerHTML = `${daysCompleted}/${daysInThisMonth}`;
 }
 
+window.onload = function() {
+    document.body.classList.add('loaded');
+};

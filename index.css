@@ -1,8 +1,16 @@
 body {
     text-align: center;
     font-family: "kindegarten", sans-serif;
-    background-image: url(flowersBackground.jpeg);
-    background-size: 200vh;
+    background-image: url(flowersBackground.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 #title {
@@ -45,6 +53,16 @@ body {
     padding: 20px;
     border:2px solid black;
     border-radius: 0px 0px 20px 20px;
+}
+
+#habitTitle:hover::after {
+    content: "Press To Change Habit";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 10px;
 }
 
 .days {
