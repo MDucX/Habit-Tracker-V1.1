@@ -2,11 +2,13 @@ body {
     text-align: center;
     font-family: "kindegarten", sans-serif;
     background-image: url(flowersBackground.webp);
-    background-size: cover;
+    background-size: 200vh;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    overflow: hidden;
+    height: 100vh;
 }
 
 body.loaded {
@@ -36,6 +38,8 @@ body.loaded {
     margin: auto;
     align-content: center;
     text-align: center;
+    width: fit-content;
+    max-width: 500px;
 }
 
 
@@ -65,8 +69,11 @@ body.loaded {
     font-size: 10px;
 }
 
+
 .days {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
 }
 
 .day {
@@ -80,15 +87,16 @@ body.loaded {
     overflow: hidden;
 }
 
-@media(max-width: 996px) {
+@media (max-width: 600px) {
     .day {
         width: 20px;
         margin: 3px;
-        padding: 10px;
+        padding: 7px;
         font-size: 10px;
         text-align: center;
         border-radius: 20px;
         transition: 0.2s;
+        overflow: hidden;
     }
 }
 
